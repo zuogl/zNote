@@ -10,17 +10,15 @@ yarn build
 # 先提交本项目到仓库
 git add -A
 git commit -m 'deploy'
+git push
 
+cd ..
 
+cp -Rf zwrite/docs/.vuepress/dist/* zblog
 
-# 进入生成的文件夹
-cd docs/.vuepress/dist
+git add .
+git commit -m '提交'
+git push
 
-git init
-git add -A
-git commit -m 'deploy'
-
-# 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:mqyqingfeng/learn-typescript.git master:gh-pages
 
 cd -
