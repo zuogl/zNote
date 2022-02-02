@@ -31,14 +31,16 @@ module.exports = {
                 'test01',
                 'test02'
             ],
+            '/Vue/': [
+                '',
+                'test01',
+                'Vuemd'
+            ],
             '/Webpack/': [
                 '',
                 'jichu',
                 'jinji'
             ],
-            // '/': [
-            //     ''
-            // ]
         },
         subSidebar: 'auto', //reco主题开启右侧标题列表
     },
