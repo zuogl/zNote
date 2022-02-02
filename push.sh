@@ -16,6 +16,8 @@ cd ..
 
 cp -Rf zwrite/docs/.vuepress/dist/* zblog
 
+cd zblog
+
 git add .
 git commit -m '提交'
 git push
