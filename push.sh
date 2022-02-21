@@ -14,7 +14,7 @@ git push
 
 cd ..
 
-cp -Rf zwrite/docs/.vuepress/dist/* zblog
+cp -Rf zNote/docs/.vuepress/dist/* zblog
 
 cd zblog
 
