@@ -1,7 +1,7 @@
 module.exports = {
     title: '小左同学的笔记',
     description: '小左同学的前端笔记',
-    base:'/zblog/',
+    base: '/zblog/',
     theme: 'reco',
     themeConfig: {
         nav: [
@@ -14,9 +14,18 @@ module.exports = {
             //         { text: 'JavaScript', link: '/' }
             //     ]
             // },
-            { text: 'Vue', link: '/Vue/' },
-            { text: 'React', link: '/React/' },
-            { text: 'Webpack', link: '/Webpack/' },
+            {
+                text: "技术笔记",
+                items: [
+                    { text: 'Mini', link: '/Mini/' },
+                    { text: 'Vue', link: '/Vue/' },
+                    { text: 'React', link: '/React/' },
+                    { text: 'Webpack', link: '/Webpack/' },
+                ]
+            },
+            {
+                text: "技术之外",link:'/nonTechnical/'
+            },
             {
                 text: '联系我',
                 items: [
@@ -26,11 +35,17 @@ module.exports = {
             }
         ],
         sidebar: {
+            '/Mini/': [
+                '',
+                'introduce',
+                'firstMP'
+            ],
             '/React/': [
                 '',
                 'test01',
                 'test02'
             ],
+      
             '/Vue/': [
                 '',
                 'test01',
