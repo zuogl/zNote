@@ -15,12 +15,18 @@ module.exports = {
             //     ]
             // },
             {
-                text: "技术笔记",
+                text: "前端",
                 items: [
                     { text: 'Mini', link: '/Mini/' },
                     { text: 'Vue', link: '/Vue/' },
                     { text: 'React', link: '/React/' },
                     { text: 'Webpack', link: '/Webpack/' },
+                ]
+            },
+            {
+                text: "后端",
+                items: [
+                    { text: 'SQL', link: '/SQL/' },
                 ]
             },
             {
@@ -35,6 +41,11 @@ module.exports = {
             }
         ],
         sidebar: {
+            '/SQL/': [
+                '',
+                'introduce',
+                'select'
+            ],
             '/Mini/': [
                 '',
                 'introduce',
