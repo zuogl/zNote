@@ -1,3 +1,28 @@
+const fs = require('fs')
+const glob = require('glob')
+const path = require('path') // 引入node的path模块
+const getSidebar = () => {
+    const entryFiles = glob.sync(path.join(__dirname, '../*/*.md')).map((item) => {
+        return item.split('docs/')[1]
+    }).reduce((acc, cur) => {
+        let key = "/" + cur.split('/')[0] + "/"
+        let value = cur.split('/')[1].split('.')[0]
+        if (!acc[key]) {
+            acc[key] = []
+            value === 'README' ? acc[key].unshift('') : acc[key].push(value)
+            return acc
+        } else {
+            value === 'README' ? acc[key].unshift('') : acc[key].push(value)
+            return acc
+        }
+    }, {})
+
+    return entryFiles
+
+    // console.log("entryFiles", entryFiles)
+
+}
+let sidebar = getSidebar()
 module.exports = {
     title: '小左同学的笔记',
     description: '小左同学的前端笔记',
@@ -30,7 +55,7 @@ module.exports = {
                 ]
             },
             {
-                text: "技术之外",link:'/nonTechnical/'
+                text: "技术之外", link: '/NonTechnical/'
             },
             {
                 text: '联系我',
@@ -40,35 +65,14 @@ module.exports = {
                 ]
             }
         ],
-        sidebar: {
-            '/SQL/': [
-                '',
-                'introduce',
-                'select'
-            ],
-            '/Mini/': [
-                '',
-                'introduce',
-                'firstMP'
-            ],
-            '/React/': [
-                '',
-                'test01',
-                'test02'
-            ],
-      
-            '/Vue/': [
-                '',
-                'test01',
-                'Vuemd'
-            ],
-            '/Webpack/': [
-                '',
-                'jichu',
-                'jinji'
-            ],
-        },
+        sidebar,
         subSidebar: 'auto', //reco主题开启右侧标题列表
+        blogConfig: {
+            tag: {
+                location: 2,     // 在导航栏菜单中所占的位置，默认3
+                text: 'Tag'      // 默认文案 “标签”
+            }
+        }
     },
     locales: {
         '/': {
