@@ -9,7 +9,7 @@ yarn build
 
 # 先提交本项目到仓库
 git add -A
-git commit -m '新增where/sinset/update/delete语句'
+git commit -m '新增and_or_not语句'
 git push
 
 cd ..
@@ -19,7 +19,7 @@ cp -Rf zNote/docs/.vuepress/dist/* zblog
 cd zblog
 
 git add .
-git commit -m '新增where/sinset/update/delete语句'
+git commit -m '新增and_or_not语句'
 git push
 
 

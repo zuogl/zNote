@@ -12,7 +12,7 @@ date: '2022-03-02'
 
 1. 功能
 
-   `update` 语句用于删除表中的行。
+   `delete` 语句用于删除表中的行。
 
 2. 语法
 
@@ -33,7 +33,7 @@ date: '2022-03-02'
    我们来删除 lastName 是 "Gates" 的人。
 
    ```sql
-   delete from Person lastName = 'Gates';
+   delete from Person where lastName = 'Gates';
    ```
    | id  | lastName | firstName | address           | city       |
    | :-- | :------- | :-------- | :---------------- | :--------- |
