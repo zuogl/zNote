@@ -1,5 +1,5 @@
 ---
-title: distinct语句
+title: distinct
 tags:
   - SQL
   - distinct
@@ -10,7 +10,8 @@ date: '2022-03-02'
 
 ### 1. distinct
 
-1. 定义
+1. 功能
+
    在`select`语句的查询结果中，返回的结果可能有重复值，但是，有时候我们只希望看到唯一不同的值，这就是`distinct`的作用。
 
 2. 语法
@@ -20,6 +21,7 @@ date: '2022-03-02'
    ```
 
 3. 例子
+
    如果我们直接用 select 来筛选 Orders 表中的 company 的话，结果如下：
 
    ```sql
