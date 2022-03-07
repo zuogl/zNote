@@ -9,7 +9,7 @@ yarn build
 
 # 先提交本项目到仓库
 git add -A
-git commit -m '时间函数完成部分'
+git commit -m '时间函数完成新增约束'
 git push
 
 cd ..
@@ -19,7 +19,7 @@ cp -Rf zNote/docs/.vuepress/dist/* zblog
 cd zblog
 
 git add .
-git commit -m '时间函数完成部分'
+git commit -m '时间函数完成新增约束'
 git push
 
 
