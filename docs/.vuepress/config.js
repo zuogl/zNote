@@ -25,10 +25,19 @@ const getSidebar = () => {
 let sidebar = getSidebar()
 module.exports = {
     title: '小左同学的笔记',
-    description: '小左同学的前端笔记',
+    description: 'welcome to my blog',
     base: '/zblog/',
     theme: 'reco',
+    head: [
+        ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
+    ],//移动端优化
     themeConfig: {
+        type: 'blog',
+        author: '左同学',
+        // 显示在个人信息的头像
+        authorAvatar: '/avatar.jpg',
+        // 导航栏左侧logo
+        logo: '/avatar.jpg',
         nav: [
             { text: '首页', link: '/' },
             // {
@@ -49,6 +58,9 @@ module.exports = {
                 ]
             },
             {
+                text: "Bug集", link: '/Bug/'
+            },
+            {
                 text: "后端",
                 items: [
                     { text: 'SQL', link: '/SQL/' },
@@ -67,6 +79,7 @@ module.exports = {
         ],
         sidebar,
         subSidebar: 'auto', //reco主题开启右侧标题列表
+        lastUpdated: 'Last Updated',// 最后更新时间
         blogConfig: {
             tag: {
                 location: 2,     // 在导航栏菜单中所占的位置，默认3
@@ -79,4 +92,25 @@ module.exports = {
             lang: 'zh-CN' //修改vuepress的默认语言为中文
         }
     },
+    plugins: [
+        ["sakura", {
+            num: 20,  // 默认数量
+            show: true, //  是否显示
+            zIndex: -1,   // 层级
+            img: {
+                replace: false,  // false 默认图 true 换图 需要填写httpUrl地址
+                httpUrl: '...'     // 绝对路径
+            }
+        }],
+        [
+            "vuepress-plugin-nuggets-style-copy",
+            {
+              copyText: "复制代码",
+              tip: {
+                content: "复制成功!",
+              },
+            },
+          ],
+    ]
+
 }
