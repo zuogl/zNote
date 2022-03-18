@@ -67,6 +67,12 @@ module.exports = {
                 ]
             },
             {
+                text: "通用",
+                items: [
+                    { text: 'Git', link: '/GIT/' },
+                ]
+            },
+            {
                 text: "技术之外", link: '/NonTechnical/'
             },
             {
