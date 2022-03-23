@@ -73,7 +73,10 @@ module.exports = {
                 ]
             },
             {
-                text: "技术之外", link: '/NonTechnical/'
+                text: "技术之外",
+                items: [
+                    { text: '视频号', link: '/WeChatVideoChannel/' },
+                ]
             },
             {
                 text: '联系我',
