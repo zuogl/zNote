@@ -35,3 +35,7 @@ $ git branch -a
   remotes/origin/master
   remotes/origin/origin/waihuv2
 ```
+
+## 2. git冲突解决之vscode中一键全部采用传入的更改
+当你的某个文件中，希望全部采用传入的更改，如果一个一个的去点击的话，太浪费时间了。可以有如下的简单操作，按`ctrl+shift+p`调出顶部的命令行窗口，然后输入`merge`,选择`Merge Conflict:Accept All Incoming`就可以瞬间搞定啦！
+

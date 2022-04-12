@@ -70,6 +70,7 @@ module.exports = {
                 text: "通用",
                 items: [
                     { text: 'Git', link: '/GIT/' },
+                    { text: '杂七杂八', link: '/Others/' },
                 ]
             },
             {
