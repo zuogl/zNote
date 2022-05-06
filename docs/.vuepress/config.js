@@ -55,6 +55,7 @@ module.exports = {
                     { text: 'Vue', link: '/Vue/' },
                     { text: 'React', link: '/React/' },
                     { text: 'Webpack', link: '/Webpack/' },
+                    { text: 'TypeScript', link: '/Ts/' },
                 ]
             },
             {
