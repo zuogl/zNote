@@ -1,0 +1,57 @@
+{
+    /***
+    include 用来指定哪些ts文件需要被编译
+    路径： ** 表示任意目录
+            * 表示任意文件
+
+
+    exclude表示哪些不需要被编译,具有默认值
+    extends:定义被继承的文件，就向引入外部文件一杨
+    files:需要被编译的文件，一个一个写出来
+    
+    **/
+    "include": [
+        "./*"
+    ],
+    "exclude": [
+        "./hello/*"
+    ],
+    // "extends": "",
+    "files": [
+        "app.ts",
+        "hellots.ts"
+    ],
+    // compilerOptions编译器的选项
+    "compilerOptions": {
+        // 用于指定被编译的js版本，默认是ES3
+        "target": "es6",
+        // module用于指定要使用的模块化规范,可选择 'none', 'commonjs', 'amd', 'system', 'umd', 'es6', 'es2015', 'es2020', 'es2022', 'esnext', 'node12', 'nodenext'.
+        "module": "es6",
+        // 用于指定项目中需要使用的库，一般不需要自己设置。当项目运行环境不是浏览器而是node环境时，需要指定一下
+        // "lib": [],
+        // 指定编译后文件所在的目录
+        "outDir": "./dist",
+        // 将代码合并为一个文件。设置outFile后，所有的全局作用域中的代码会合并到同一个文件中。需要使用该属性时，module的值只能是amd 或者 system
+        // "outFile": "./dist/index.js",
+        // 是否对JS文件进行编译，默认是false，不会将目标下的js文件打包编译到对应的输出文件夹中，true则会。和checkJs通常一起使用
+        "allowJs": false,
+        // 是否检查js代码是否符合语法规范，默认false,不检查
+        "checkJs": false,
+        // 是否移除注释
+        "removeComments": false,
+        // true就会不生成编译后的文件
+        "noEmit": false,
+        // true的话，当有错误时，不生成编译文件
+        "noEmitOnError": false,
+        // 所有严格检查的总开关,一开都开，一关都关，下边在单独的开关
+        "strict": true,
+        // 用来设置编译后的文件是否使用严格模式，默认false
+        "alwaysStrict": false,
+        // true的话不允许隐式的any类型
+        "noImplicitAny": true,
+        // 不允许不明确类型的this
+        "noImplicitThis": true,
+        // 严格检查空值，默认false
+        "strictNullChecks": true,
+    }
+}
