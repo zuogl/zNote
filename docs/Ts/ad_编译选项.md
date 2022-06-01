@@ -14,3 +14,6 @@ tsc xxx.ts -W
 
 
 tsconfig.json文件是ts编译器的配置文件，ts编译器可以根据它的信息来对代码进行编译
+
+
+再使用ts模块化时，打包需要注意配置resolve.extensions,否则会报错。
