@@ -1,7 +1,6 @@
 ---
 title: select
 tags:
- - select
  - SQL
 
 author: 小左同学

@@ -17,9 +17,9 @@ const getSidebar = () => {
         }
     }, {})
 
+    // console.log("entryFiles", entryFiles)
     return entryFiles
 
-    // console.log("entryFiles", entryFiles)
 
 }
 let sidebar = getSidebar()
@@ -40,20 +40,10 @@ module.exports = {
         logo: '/avatar.jpg',
         nav: [
             { text: '首页', link: '/' },
-            // {
-            //     text: '前端三件套',
-            //     items: [
-            //         { text: 'HTML', link: '/' },
-            //         { text: 'CSS', link: '/' },
-            //         { text: 'JavaScript', link: '/' }
-            //     ]
-            // },
             {
                 text: "前端",
                 items: [
-                    { text: 'Mini', link: '/Mini/' },
                     { text: 'Vue', link: '/Vue/' },
-                    { text: 'React', link: '/React/' },
                     { text: 'Webpack', link: '/Webpack/' },
                     { text: 'TypeScript', link: '/Ts/' },
                 ]
@@ -72,12 +62,6 @@ module.exports = {
                 items: [
                     { text: 'Git', link: '/GIT/' },
                     { text: '杂七杂八', link: '/Others/' },
-                ]
-            },
-            {
-                text: "技术之外",
-                items: [
-                    { text: '视频号', link: '/WeChatVideoChannel/' },
                 ]
             },
             {
