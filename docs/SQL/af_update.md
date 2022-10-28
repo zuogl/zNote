@@ -2,7 +2,6 @@
 title: update
 tags:
   - SQL
-  - update
 
 author: 小左同学
 date: '2022-03-02'

@@ -2,7 +2,6 @@
 title: insert into
 tags:
   - SQL
-  - insert into
 
 author: 小左同学
 date: '2022-03-02'
