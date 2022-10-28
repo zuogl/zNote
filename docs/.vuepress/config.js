@@ -51,9 +51,9 @@ module.exports = {
             {
                 text: "前端",
                 items: [
-                    { text: 'Mini', link: '/Mini/' },
+                    // { text: 'Mini', link: '/Mini/' },
                     { text: 'Vue', link: '/Vue/' },
-                    { text: 'React', link: '/React/' },
+                    // { text: 'React', link: '/React/' },
                     { text: 'Webpack', link: '/Webpack/' },
                 ]
             },
