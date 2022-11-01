@@ -9,7 +9,7 @@ yarn build
 
 # 先提交本项目到仓库
 git add -A
-git commit -m '优化SQL的tag，去除无用的导航'
+git commit -m '新增声明式和命令式'
 git push
 
 cd ..
@@ -19,7 +19,7 @@ cp -Rf zNote/docs/.vuepress/dist/* zblog
 cd zblog
 
 git add .
-git commit -m '新增主题配置'
+git commit -m '新增声明式和命令式'
 git push
 
 
