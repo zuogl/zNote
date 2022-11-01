@@ -2,7 +2,6 @@
 title: limit
 tags:
   - SQL
-  - limit
 
 author: 小左同学
 date: '2022-03-03'

@@ -2,7 +2,6 @@
 title: 时间函数
 tags:
   - SQL
-  - 时间函数
 
 author: 小左同学
 date: '2022-03-04'

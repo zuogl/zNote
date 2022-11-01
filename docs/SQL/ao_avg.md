@@ -2,14 +2,6 @@
 title: 算数函数
 tags:
   - SQL
-  - avg
-  - max
-  - min
-  - round
-  - count
-  - sum
-  - ifnull
-  - isnull
 
 author: 小左同学
 date: '2022-03-03'

@@ -2,7 +2,6 @@
 title: 联结
 tags:
   - SQL
-  - 联结
 
 author: 小左同学
 date: '2022-03-08'

@@ -2,7 +2,6 @@
 title: order by
 tags:
   - SQL
-  - order by
 
 author: 小左同学
 date: '2022-03-03'

@@ -16,8 +16,6 @@ const getSidebar = () => {
             return acc
         }
     }, {})
-
-    // console.log("entryFiles", entryFiles)
     return entryFiles
 
 
@@ -43,9 +41,7 @@ module.exports = {
             {
                 text: "前端",
                 items: [
-                    { text: 'Vue', link: '/Vue/' },
-                    { text: 'Webpack', link: '/Webpack/' },
-                    { text: 'TypeScript', link: '/Ts/' },
+                    { text: 'Vue', link: '/Vue/' }
                 ]
             },
             {
@@ -98,24 +94,6 @@ module.exports = {
               }
            }
           ]
-        // ["sakura", {
-        //     num: 20,  // 默认数量
-        //     show: true, //  是否显示
-        //     zIndex: -1,   // 层级
-        //     img: {
-        //         replace: false,  // false 默认图 true 换图 需要填写httpUrl地址
-        //         httpUrl: '...'     // 绝对路径
-        //     }
-        // }],
-        // [
-        //     "vuepress-plugin-nuggets-style-copy",
-        //     {
-        //       copyText: "复制代码",
-        //       tip: {
-        //         content: "复制成功!",
-        //       },
-        //     },
-        //   ],
     ]
 
 }
