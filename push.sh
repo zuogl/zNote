@@ -9,7 +9,7 @@ yarn build
 
 # 先提交本项目到仓库
 git add -A
-git commit -m '新增声明式和命令式'
+git commit -m '第一章节完成'
 git push
 
 cd ..
@@ -19,7 +19,7 @@ cp -Rf zNote/docs/.vuepress/dist/* zblog
 cd zblog
 
 git add .
-git commit -m '新增声明式和命令式'
+git commit -m '第一章节完成'
 git push
 
 
