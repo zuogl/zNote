@@ -160,7 +160,6 @@ export default = {
         handleError = fn
     }
 }
-
 function callWithErrorHandling(fn){
     try{
         fn && fn()
@@ -169,5 +168,4 @@ function callWithErrorHandling(fn){
         handleError(e)
     }
 }
-
 ```
