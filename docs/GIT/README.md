@@ -39,3 +39,16 @@ $ git branch -a
 ## 2. git冲突解决之vscode中一键全部采用传入的更改
 当你的某个文件中，希望全部采用传入的更改，如果一个一个的去点击的话，太浪费时间了。可以有如下的简单操作，按`ctrl+shift+p`调出顶部的命令行窗口，然后输入`merge`,选择`Merge Conflict:Accept All Incoming`就可以瞬间搞定啦！
 
+## 3. 更新远程主机origin,整理分支
+```js
+git remote update origin --prune 
+```
+有时候我们在切分支的时候会出现如下问题`fatal: 'origin/zgl-dev' is not a commit and a branch 'zgl-dev' cannot be created from it`,是因为本地没有关联到远程新建的分支。用上边的命令整理一下分支就可以了。
+![](./img/gitUpdate.png)
+
+### 4. 查看本地分支和远程分支对应关系
+```js
+git branch -vv 
+```
+
+  

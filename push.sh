@@ -9,7 +9,7 @@ yarn build
 
 # 先提交本项目到仓库
 git add -A
-git commit -m '新增第2.5章节'
+git commit -m '新增vue3demo'
 git push
 
 cd ..
@@ -19,7 +19,7 @@ cp -Rf zNote/docs/.vuepress/dist/* zblog
 cd zblog
 
 git add .
-git commit -m '新增第2.5章节'
+git commit -m '新增vue3demo'
 git push
 
 

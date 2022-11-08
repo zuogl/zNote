@@ -1,19 +1,15 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld ref="hello"  msg="Welcome to Your Vue.js App"/>
+  <div>
+    <router-link to="/">首页</router-link>
+     
+    <router-link to="/about" style="margin-left: 20px;">关于</router-link>
+  </div>
+  <router-view></router-view>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  },
-  mounted () {
-    console.log('ref',this.$refs.hello)
-  }
 }
 </script>
 
