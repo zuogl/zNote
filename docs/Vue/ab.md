@@ -169,3 +169,11 @@ function callWithErrorHandling(fn){
     }
 }
 ```
+在Vue3.js中我们也可以注册统一的错误处理函数：
+```js
+import App from 'App.vue'
+const app = createApp(App)
+app.config.errorHandler=()=>{
+  // 错误处理程序
+}
+```
