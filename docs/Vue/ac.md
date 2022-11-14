@@ -82,5 +82,37 @@ let vnode = {
 ```
 接下来编写一个渲染器：
 ```js
-
+function renderer(vnode, container) {
+    // 使用vnode.tag 作为标签名创建DOM元素
+    const el = document.createElement(vnode.tag)
+    // 遍历 vnode。props ,将属性、事件添加到DOM元素
+    for (const key in vnode.props) {
+        if (/^on/.test(key)) {
+            // 如果以on开头，说明是事件
+            el.addEventListener(key.substr(2).toLowerCase(),
+                vnode.props[key] // 事件处理函数
+            )
+        }
+    }
+    // 处理children
+    if (typeof vnode.children === 'string') {
+        // 如果children是字符串，说明它是元素的文本子节点
+        el.appendChild(document.createTextNode(vnode.children))
+    } else if (Array.isArray(vnode.children)) {
+        // 递归调用renderer函数渲染子节点，使用当前的el作为挂载点
+        vnode.forEach(child => renderer(child, el));
+    }
+    // 将元素添加到挂载点
+    container.appendChild(el)
+}
 ```
+我们可以随意的打开一个网页的控制台，然后**删除body里边的所有元素，使页面空白**，然后将上边的vnode和renderer函数在控制台中定义好，然后在调用`renderer(vnode,document.body)`,页面就会出现`click me`元素啦！然后点击，就会出现如下效果，说明咋们写的简易渲染器是有效的！
+![](./img/render2.png)
+
+现在我们来分析一下renderer实现的思路，总体的来说分为三步：
+  - 创建元素：将出入的vnode.tag作为标签名称来创建DOM元素；
+  - 为元素添加事件和属性：遍历vnode的props,如果key值以on开头的话，说明它是一个事件，把on截取掉然后在转为小写，得到合法的事件名称，最后调用addEventListener绑定事件处理函数
+  - 处理children:如果children是一个数组，就需要递归调用renderer函数，需要注意的是**我们要把刚刚创建的元素作为挂载点**;如果children是字符串，则使用createTextNode创建一个文本节点，并将其挂载到新创建的元素上。
+
+
+**渲染器的精髓不在于初次创建节点，而是在更新节点阶段**，如果我们传入的vnode发生了一点儿变化，渲染器需要精准的找到发生变化的点，并且做到只更新变化的地方，这在后续会继续讲解！
