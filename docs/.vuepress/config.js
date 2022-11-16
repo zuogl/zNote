@@ -42,7 +42,8 @@ module.exports = {
                 text: "前端",
                 items: [
                     { text: 'Vue', link: '/Vue/' },
-                    { text: 'JSCode', link: '/JSCode/' }
+                    { text: 'JS代码片段', link: '/JSCode/' },
+                    { text: 'JS基础', link: '/JSFoundation/' }
                 ]
             },
             {

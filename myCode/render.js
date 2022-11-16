@@ -70,3 +70,21 @@ const myComponent = {
     }
 
 }
+
+
+// function render(){
+//     return{
+//         tag: 'div',
+//         props: {
+//            id:'foo',
+//            class:'cls'
+//         },
+//     },
+//     patchFlags:1//假设数字1代表class是动态的
+// }
+
+
+// let val = 1 ; // 全局变量
+// function effect(){
+//     val = 3
+// }
