@@ -34,6 +34,7 @@ function effect () {
   document.body.innerText = obj.text
 }
 obj.text = 'hello world' // 修改obj.text的值，希望副作用函数自动重新执行
+
 ```
 
 显然这个对象仅仅是一个普通数据，不是一个响应式的数据，我们下一节会讨论如何实现一个简单的响应式数据

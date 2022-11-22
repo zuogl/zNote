@@ -58,18 +58,18 @@ function mountComponent(vnode, container) {
     renderer(subtree, container)
 }
 
-const myComponent = {
-    render() {
-        return {
-            tag: 'div',
-            props: {
-                onClick: () => { alert('hello') }
-            },
-            children: 'click me'
-        }
-    }
+// const myComponent = {
+//     render() {
+//         return {
+//             tag: 'div',
+//             props: {
+//                 onClick: () => { alert('hello') }
+//             },
+//             children: 'click me'
+//         }
+//     }
 
-}
+// }
 
 
 // function render(){

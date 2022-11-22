@@ -92,6 +92,8 @@ set.size // 2
 - `Set.prototype.delete(value)`：删除某个值，返回一个布尔值，表示删除是否成功。
 - `Set.prototype.has(value)`：返回一个布尔值，表示该值是否为Set的成员。
 - `Set.prototype.clear()`：清除所有成员，没有返回值。
+
+
 上面这些属性和方法的实例如下。
 ```js
 s.add(1).add(2).add(2);
@@ -108,6 +110,7 @@ s.has(2) // false
 ```
 
 下面是一个对比，看看在判断是否包括一个键上面，`Object`结构和`Set`结构的写法不同。
+
 ```js
 // 对象的写法
 const properties = {
