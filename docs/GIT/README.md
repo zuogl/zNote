@@ -46,9 +46,20 @@ git remote update origin --prune
 有时候我们在切分支的时候会出现如下问题`fatal: 'origin/zgl-dev' is not a commit and a branch 'zgl-dev' cannot be created from it`,是因为本地没有关联到远程新建的分支。用上边的命令整理一下分支就可以了。
 ![](./img/gitUpdate.png)
 
-### 4. 查看本地分支和远程分支对应关系
+## 4. 分支查看
 ```js
-git branch -vv 
+git branch -vv  // 查看本地分支和远程分支对应关系
+git branch //查看本地分支
+git branch -r // 查看远程分支
+git branch -a //查看所有分支
 ```
-
+## 5. 删除远程分支
+```js
+git push origin --delete 远程分支名字
+```
   
+## 6. 打tag
+```js
+git tag -a  tag注释
+git push --tags  将打好的tag推送到远端
+```
