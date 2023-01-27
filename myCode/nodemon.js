@@ -1,4 +1,5 @@
 
+// 只能代理对象类型，字符串，布尔值，数字类型等均不能作为被代理对象
 // let data = { name: "小左同学" }
 
 
@@ -320,5 +321,15 @@
 //   proxy.foo = 'bar' // 不会生效
 
 //   console.log(proxy.foo)
+
+// const set = new Set()
+// set.add(1)
+
+
+// set.forEach(s => {
+//     set.delete(1)
+//     set.add(1)
+//     console.log('循环啦！')
+// });
 
 
