@@ -1,0 +1,58 @@
+{
+  "id": "3870845",
+  "name": "sudoku",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3456457",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e70f",
+      "unicode_decimal": 59151
+    },
+    {
+      "icon_id": "1264",
+      "name": "编辑",
+      "font_class": "bianji",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "386337",
+      "name": "叉",
+      "font_class": "cha",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "4686545",
+      "name": "刷新",
+      "font_class": "shuaxin",
+      "unicode": "ec08",
+      "unicode_decimal": 60424
+    },
+    {
+      "icon_id": "5387495",
+      "name": "主题_调色盘",
+      "font_class": "zhuti_tiaosepan",
+      "unicode": "eaec",
+      "unicode_decimal": 60140
+    },
+    {
+      "icon_id": "7417080",
+      "name": "撤销",
+      "font_class": "chexiao",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "29116218",
+      "name": "对勾",
+      "font_class": "duigou",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    }
+  ]
+}

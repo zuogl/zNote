@@ -2,7 +2,7 @@
   <div>
     <router-link to="/">首页</router-link>
 
-    <router-link to="/about" style="margin-left: 20px;">关于</router-link>
+    <router-link to="/about" style="margin-left: 20px;">鼠标</router-link>
     <router-link to="/sudoku" style="margin-left: 20px;">数独</router-link>
   </div>
   <router-view></router-view>

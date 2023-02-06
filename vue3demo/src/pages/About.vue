@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>这是关于页面</h1>
+        <h1>这是鼠标页面</h1>
         <div>这是鼠标的X方向的位置:{{ x }}</div>
         <div>这是鼠标的Y方向的位置:{{ y }}</div>
         <h1 @click="add">{{count}}</h1>
