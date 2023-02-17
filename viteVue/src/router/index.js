@@ -11,10 +11,11 @@ export const constantRoutes = [
         path: "/home",
         component: Layout,
         redirect: '/home/',
+        name: "Home",
         children: [
             {
                 path: '',
-                name: "Home",
+                name: 'ReallyHome',
                 component: Home
             }
         ]
@@ -23,10 +24,11 @@ export const constantRoutes = [
         path: "/about",
         component: Layout,
         redirect: '/about/',
+        name: "About",
         children: [
             {
                 path: "",
-                name: "About",
+                name: 'ReallyAbout',
                 component: About
             }
         ],
@@ -37,19 +39,18 @@ export const constantRoutes = [
         path: "/test",
         component: Layout,
         redirect: '/test/',
+        name: "Double",
         children: [
             {
                 path: '',
                 component: Test,
                 name: "test",
-                children: [
-                    {
-                        path: "sudoku",
-                        name: "sudoku",
-                        component: Sudoke
-                    },
-                ]
-            }
+            },
+            {
+                path: "sudoku",
+                name: "sudoku",
+                component: Sudoke
+            },
 
         ],
 
@@ -60,7 +61,7 @@ export const constantRoutes = [
 const router = createRouter({
     history: createWebHashHistory(),
     scrollBehavior: () => ({ y: 0 }),
-    routes:constantRoutes
+    routes: constantRoutes
 })
 
 export default router
