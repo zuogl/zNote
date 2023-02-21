@@ -1,10 +1,10 @@
 <template>
     <div>
-
+        This is test 页面
     </div>
 </template>
 
-<script name="Sudoku" setup>
+<script name="test" setup>
 
 </script>
 

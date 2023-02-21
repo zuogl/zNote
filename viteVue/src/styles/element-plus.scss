@@ -1,0 +1,4 @@
+// 这个文件用于覆盖element-plus 的默认样式
+.el-sub-menu .el-sub-menu__icon-arrow {
+  display: none !important;
+}

@@ -1,10 +1,10 @@
 <template>
     <div>
-
+        This is chart2 页面
     </div>
 </template>
 
-<script name="Sudoku" setup>
+<script name="chart2" setup>
 
 </script>
 

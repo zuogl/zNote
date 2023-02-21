@@ -1,10 +1,10 @@
 <template>
     <div>
-
+        This is Pie1 页面
     </div>
 </template>
 
-<script name="Sudoku" setup>
+<script name="Pie1" setup>
 
 </script>
 

@@ -2,13 +2,13 @@
   "name": "vitevuedemo",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.0.10",
     "element-plus": "^2.2.30",
     "pinia": "^2.0.30",
     "sass": "^1.58.2",
