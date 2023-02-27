@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Performace</title>
+</head>
+
+<body>
+    <script>
+        function a() {
+            b();
+        }
+        function b() {
+            let total = 0;
+            for (let i = 0; i < 10 * 10000 * 10000; i++) {
+                total += i;
+            }
+            console.log('b:', total);
+        }
+
+        a();
+    </script>
+</body>
+
+</html>
