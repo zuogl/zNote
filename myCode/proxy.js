@@ -32,17 +32,17 @@
 // const bucket = new Set() // 存储副作用函数的桶
 // const data = { text: "hello world!" } // 原始数据
 
-// let activeEffect;
+// let currentEffect;
 // function effect(fn) { // 用于注册副作用函数
-//     activeEffect = fn;
+//     currentEffect = fn;
 //     fn()
 // }
 
 
 // const obj = new Proxy(data, {
 //     get(target, key) {
-//         if (activeEffect) {
-//             bucket.add(activeEffect)
+//         if (currentEffect) {
+//             bucket.add(currentEffect)
 //         }
 //         return target[key]
 //     },
@@ -165,6 +165,9 @@
 //     console.log('副作用函数执行啦')
 //     document.body.innerText = obj.ok ? obj.text : 'not'
 // })
+
+
+
 // *********************分支切换与cleanUp*******************
 
 // const bucket = new WeakMap();
@@ -405,82 +408,100 @@
 
 
 // **************************************避免无限递归***************************************************
-const bucket = new WeakMap();
+// const bucket = new WeakMap();
 
-const data = { num: 1 }
-let activeEffect;
-const effectStack = []
-function effect(fn) {
-    const effectFn = () => {
-        debugger
-        // 调用cleanup函数完成清除工作
-        cleanup(effectFn)
-        // 但effectFn执行时，将其设置为当前激活的副作用函数
-        activeEffect = effectFn;
-        effectStack.push(effectFn) // 在调用副作用函数时，将当前副作用函数压入栈中
-        fn()
-        effectStack.pop() // 当副作用函数执行完毕后，将当前副作用函数弹出栈，并把activeEffect还原为之前的值
-        activeEffect = effectStack[effectStack.length - 1]
-    }
-    // activeEffect.deps用来存储所有与该副作用函数相关联的依赖集合
-    effectFn.deps = []
-    // 执行副作用函数
-    effectFn()
-}
-function cleanup(effectFn) {
-    for (let i = 0; i < effectFn.deps.length; i++) {
-        const deps = effectFn.deps[i] // deps 是依赖集合
-        deps.delete(effectFn) // 将effectFn从依赖集合中移除
-    }
-    effectFn.deps.length = 0
-}
+// const data = { num: 1 }
+// let activeEffect;
+// const effectStack = []
+// function effect(fn) {
+//     const effectFn = () => {
+//         debugger
+//         // 调用cleanup函数完成清除工作
+//         cleanup(effectFn)
+//         // 但effectFn执行时，将其设置为当前激活的副作用函数
+//         activeEffect = effectFn;
+//         effectStack.push(effectFn) // 在调用副作用函数时，将当前副作用函数压入栈中
+//         fn()
+//         effectStack.pop() // 当副作用函数执行完毕后，将当前副作用函数弹出栈，并把activeEffect还原为之前的值
+//         activeEffect = effectStack[effectStack.length - 1]
+//     }
+//     // activeEffect.deps用来存储所有与该副作用函数相关联的依赖集合
+//     effectFn.deps = []
+//     // 执行副作用函数
+//     effectFn()
+// }
+// function cleanup(effectFn) {
+//     for (let i = 0; i < effectFn.deps.length; i++) {
+//         const deps = effectFn.deps[i] // deps 是依赖集合
+//         deps.delete(effectFn) // 将effectFn从依赖集合中移除
+//     }
+//     effectFn.deps.length = 0
+// }
 
-const obj = new Proxy(data, {
-    get(target, key) {
-        debugger
-        track(target, key)
-        return target[key]
-    },
-    set(target, key, value) {
-        debugger
-        target[key] = value
-        trigger(target, key)
-    }
-})
+// const obj = new Proxy(data, {
+//     get(target, key) {
+//         debugger
+//         track(target, key)
+//         return target[key]
+//     },
+//     set(target, key, value) {
+//         debugger
+//         target[key] = value
+//         trigger(target, key)
+//     }
+// })
 
-function track(target, key) {
-    if (!activeEffect) return;
-    let depsMap = bucket.get(target)
-    if (!depsMap) {
-        bucket.set(target, depsMap = new Map())
-    }
-    let deps = depsMap.get(key)
-    if (!deps) {
-        depsMap.set(key, deps = new Set())
-    }
-    deps.add(activeEffect)
-    // deps 就是一个与当前副作用函数存在联系的依赖集合，将其添加到activeEffect.deps数组中
-    activeEffect.deps.push(deps)
-}
+// function track(target, key) {
+//     if (!activeEffect) return;
+//     let depsMap = bucket.get(target)
+//     if (!depsMap) {
+//         bucket.set(target, depsMap = new Map())
+//     }
+//     let deps = depsMap.get(key)
+//     if (!deps) {
+//         depsMap.set(key, deps = new Set())
+//     }
+//     deps.add(activeEffect)
+//     // deps 就是一个与当前副作用函数存在联系的依赖集合，将其添加到activeEffect.deps数组中
+//     activeEffect.deps.push(deps)
+// }
 
-function trigger(target, key) {
-    const depsMap = bucket.get(target)
-    if (!depsMap) return
-    const effects = depsMap.get(key)
+// function trigger(target, key) {
+//     const depsMap = bucket.get(target)
+//     if (!depsMap) return
+//     const effects = depsMap.get(key)
 
-    const effectsToRun = new Set()
-    effects && effects.forEach((effectFn) => {
-        if (effectFn !== activeEffect) {
-            effectsToRun.add(effectFn)
-        }
-    })
+//     const effectsToRun = new Set()
+//     effects && effects.forEach((effectFn) => {
+//         if (effectFn !== activeEffect) {
+//             effectsToRun.add(effectFn)
+//         }
+//     })
 
-    effectsToRun.forEach(effectFn => effectFn())
-}
+//     effectsToRun.forEach(effectFn => effectFn())
+// }
 
-effect(() => {
-    obj.num++
-    console.log(obj)
-})
+// effect(() => {
+//     obj.num++
+//     console.log(obj)
+// })
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 

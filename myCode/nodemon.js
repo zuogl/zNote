@@ -332,3 +332,46 @@
 //     console.log('循环啦！')
 // });
 
+
+
+var scope = "global scope";
+// function checkscope(){
+//     var scope = "local scope";
+//     function f(){
+//         console.log(scope)
+//         return scope;
+//     }
+//     return f();
+// }
+// let a = checkscope();
+// console.log('a',a)
+
+
+// function checkscope(){
+//     var scope = "local scope";
+//     function f(){
+//         // return scope;
+//         console.log(scope)
+//     }
+//     return f;
+// }
+// let b = checkscope()();
+
+// console.log('b',b)
+
+
+
+// var a = {n: 1};
+// var b = a;
+// a.x = a = {n: 2};
+
+// console.log(b.x)
+// console.log(a.x)
+// console.log(a)
+// console.log(b)
+
+
+// var a,b;
+// a = b = 66
+// console.log(a)
+// console.log(b)
