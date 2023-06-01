@@ -178,7 +178,6 @@
 //     debugger
 
 //     const effectFn = () => {
-//         debugger
 //         // 调用cleanup函数完成清除工作
 //         cleanup(effectFn)
 //         // 但effectFn执行时，将其设置为当前激活的副作用函数
@@ -490,6 +489,116 @@
 
 
 
+// **************************解决effect嵌套问题****************************************
+
+
+// const bucket = new WeakMap();
+// const person = { name: "小左同学", age: 18 };
+
+
+// let currentEffect;
+// let effectArray = []
+// function effect(fn) {
+//     const effectFn = () => {
+//         // 调用cleanup函数完成清除工作
+//         cleanup(effectFn)
+//         // 但effectFn执行时，将其设置为当前活动的副作用函数
+//         currentEffect = effectFn;
+//         // 在副作用函数执行前，将当前副作用函数push进数组中
+//         effectArray.push(effectFn)
+//         fn()
+//         // 当副作用函数执行完毕后，将其从数组中pop出去
+//         effectArray.pop()
+//         // 始终让currentEffect指向数组的最后一个数据
+//         currentEffect = effectArray[effectArray.length - 1];
+//     }
+//     // currentEffect.deps用来存储所有与该副作用函数相关联的依赖集合
+//     effectFn.deps = []
+//     // 执行副作用函数
+//     effectFn()
+
+// }
+
+// function cleanup(effectFn) {
+//     for (let i = 0; i < effectFn.deps.length; i++) {
+//         // deps 是依赖集合
+//         const deps = effectFn.deps[i]
+//         // 将effectFn从依赖集合中移除
+//         deps.delete(effectFn)
+//     }
+//     effectFn.deps.length = 0
+// }
+
+// const obj = new Proxy(person, {
+//     get(target, key) {
+//         track(target, key)
+//         return target[key]
+//     },
+//     set(target, key, value) {
+//         target[key] = value
+//         trigger(target, key)
+//     }
+// })
+
+// function track(target, key) {
+//     if (!currentEffect) return;
+//     let depsMap = bucket.get(target)
+//     if (!depsMap) {
+//         bucket.set(target, depsMap = new Map())
+//     }
+//     let deps = depsMap.get(key)
+//     if (!deps) {
+//         depsMap.set(key, deps = new Set())
+//     }
+//     deps.add(currentEffect)
+//     // deps 就是一个与当前副作用函数存在联系的依赖集合，将其添加到currentEffect.deps数组中
+//     currentEffect.deps.push(deps)
+// }
+
+// function trigger(target, key) {
+//     const depsMap = bucket.get(target)
+//     if (!depsMap) return
+//     const effects = depsMap.get(key)
+//     const effectsToRun = new Set(effects)
+//     effectsToRun.forEach(effectFn => effectFn())
+//     // effects && effects.forEach(fn => fn()) //引入cleanup后，仍旧这么写，会导致无限循环，原因是因为用forEach来遍历Set时，如果一个值已经被访问过，但该值被删除并重新添加到集合，如果此时forEach没有结束，那么该值会被重新访问。
+// }
+
+
+// effect(function effectFn1() {
+//     effect(function effectFn2() {
+//         console.log('effectFn2读取了age属性', obj.age)
+//     })
+//     console.log('effectFn1读取了name属性', obj.name)
+// })
+
+
+// setTimeout(() => {
+//     obj.name = '左同学'
+// }, 1000);
+
+
+
+
+let len = 117
+
+let fun = {
+    len: 693,
+    showL: function () {
+        debugger
+        console.log(this.len)
+    },
+    show: function () {
+        debugger
+        (function (cb) {
+            cb()
+        })(this.showL)
+    }
+}
+
+
+
+fun.show()
 
 
 
@@ -498,10 +607,3 @@
 
 
 
-
-
-
-
-
-
-// 

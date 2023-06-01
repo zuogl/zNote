@@ -1,0 +1,11 @@
+{
+  "name": {
+    "message": "i18n 测试插件"
+  },
+  "description": {
+    "message": "一款为了学习谷歌插件国际化的插件，支持汉语，日语，俄语。"
+  },
+  "defaultTitle": {
+    "message": "i18n 测试插件"
+  }
+}

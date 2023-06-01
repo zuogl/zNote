@@ -1,0 +1,11 @@
+{
+  "name": "__MSG_name__",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "__MSG_description__",
+  "default_locale": "zh_CN",
+  "action": {
+    "default_title": "__MSG_defaultTitle__",
+    "default_popup": "popUp/popup.html"
+  }
+}

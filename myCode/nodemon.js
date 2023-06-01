@@ -375,3 +375,4 @@ var scope = "global scope";
 // a = b = 66
 // console.log(a)
 // console.log(b)
+
