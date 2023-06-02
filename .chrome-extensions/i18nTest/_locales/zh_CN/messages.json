@@ -1,11 +1,91 @@
 {
   "name": {
-    "message": "i18n 测试插件"
+    "message": "i18n 测试插件 $value0$  $value2$  $value1$ -- $value3$",
+    "placeholders": {
+      "value0": {
+        "content": "value0默认",
+        "example": "value0example"
+      },
+      "value1": {
+        "content": "$1"
+      },
+      "value2": {
+        "content": "$2",
+        "example": "value2Example"
+      },
+      "value3": {
+        "content": "$3",
+        "example": "value3Example"
+      }
+    }
   },
   "description": {
     "message": "一款为了学习谷歌插件国际化的插件，支持汉语，日语，俄语。"
   },
   "defaultTitle": {
     "message": "i18n 测试插件"
+  },
+  "textArray0": {
+    "message": "单击我测试detectLanguage"
+  },
+  "textArray1": {
+    "message": "点击我测试getAcceptLanguages"
+  },
+  "textArray2": {
+    "message": "点击我测试getMessage"
+  },
+  "textArray3": {
+    "message": "点击我测试getUILanguage"
+  },
+  "middleBoxObj_detectLanguage_title_text": {
+    "message": "每个button下边的文字是输入chrome.i18n.detectLanguage()的第一个参数，右边一栏是输出的结果"
+  },
+  "middleBoxObj_detectLanguage_btn1_text": {
+    "message": "测试大段中文"
+  },
+  "middleBoxObj_detectLanguage_p1_text": {
+    "message": "一阵清风拂面而来,我感到精神为之一振。这阵风似乎带着某种特殊的力量,让人顿时清醒并放松下来。我找了张椅子坐下,深深地呼吸这清新怡人的空气。许久未上的工作眼见着就要截止日期,我却总感觉力不从心,提不起劲来。其实我知道,这只是自己心态上的问题,事实上我有足够的能力和时间来完成它。只是最近总感觉很疲倦,脑子也没那么清醒敏捷。或许是天气转热,生理上造成的影响吧。 不过现在这阵风把我吹醒了。我突然意识到,生命在于运动,只有不断前行才能打开新天地。虽说工作任务艰巨,但只要一步步来,定能完成。何况我还有同事朋友的帮助支持。人生路上,有时必须主动出击,而不是被动等待。我需要调整心态,积极进取,展现出应有的姿态。 我深深吸气,站起身来,伸了个懒腰。没错,我准备好了!一切皆在掌握之中。我要主动出击,选择积极心态!这阵清风的确给我带来了智慧——只要积极面对,一切皆有可能。我相信,这次工作定能顺利完成!努力奋斗,开启美好新篇章!充满自信和动力,我回到电脑前,开始专注工作。这阵清风,真的很神奇,给了我内心的觉醒和力量。感谢这个居然在平淡日常中到来的小惊喜!我要好好利用它带来的清醒与智慧,完成自己心中的那份事业。"
+  },
+  "middleBoxObj_detectLanguage_btn2_text": {
+    "message": "测试中英俄混合"
+  },
+  "middleBoxObj_detectLanguage_btn3_text": {
+    "message": "测试纯数字"
+  },
+  "middleBoxObj_detectLanguage_p3_text": {
+    "message": "2333666"
+  },
+  "middleBoxObj_getMessage_title_text": {
+    "message": "每个button下边的文字是输入chrome.i18n.getMessage()的第参数---点击查看messages.json的配置截图"
+  },
+  "middleBoxObj_getMessage_btn1_text": {
+    "message": "传入没有在messages.json中定义数据"
+  },
+  "middleBoxObj_getMessage_p1_text": {
+    "message": "test"
+  },
+  "middleBoxObj_getMessage_btn2_text": {
+    "message": "传入的不是数字"
+  },
+  "middleBoxObj_getMessage_btn3_text": {
+    "message": "传入替换字符串"
+  },
+  "middleBoxObj_getMessage_p3_text": {
+    "message": "'name', ['0号位','1号位','2号位']"
+  },
+  "middleBoxObj_getMessage_p3_0_text": {
+    "message": "0号位"
+  },
+  "middleBoxObj_getMessage_p3_1_text": {
+    "message": "1号位"
+  },
+  "middleBoxObj_getMessage_p3_2_text": {
+    "message": "2号位"
+  },
+  "closeBigImg": {
+    "message": "关闭大图"
+  },
+  "getAcceptLanguagesMessage": {
+    "message": "该方法只有一个回调函数作为参数，用于处理这个方法调用后的结果,結果如下："
   }
 }

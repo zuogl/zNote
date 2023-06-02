@@ -16,10 +16,40 @@
         justify-content: space-evenly;
         padding: 15px;
       }
-      .result{
+      .result {
         padding: 15px;
         width: 300px;
         height: 500px;
+      }
+      .middleBox {
+        padding: 15px;
+        width: 300px;
+        border-right: 1px dotted green;
+      }
+      .middleWith {
+        width: 300px;
+      }
+      .middleBox h5 {
+        margin-bottom: 20px;
+      }
+      .middleBox p {
+        margin-bottom: 10px;
+      }
+      .middleBox img {
+        width: 100%;
+      }
+      .bigImg {
+        position: absolute;
+        width: 90%;
+        display: none;
+      }
+      .closeBigImg{
+        position: absolute;
+        display: none;
+        right: 0;
+      }
+      .show{
+        display: block !important;
       }
     </style>
   </head>
@@ -30,9 +60,9 @@
       <button></button>
       <button></button>
     </div>
-    <div class="middleBox"></div>
-    <pre class="result"></pre>
-
+    <div class="result"></div>
+    <img class="bigImg"></img>
+    <button class="closeBigImg"></button>
     <script src="./popup.js" type="module"></script>
   </body>
 </html>

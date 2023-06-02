@@ -1,5 +1,91 @@
 {
   "name": {
-    "message": "Message text, with optional placeholders."
+    "message": "i18n テストプラグイン $value0$  $value2$  $value1$ -- $value3$",
+    "placeholders": {
+      "value0": {
+        "content": "値0のデフォルト",
+        "example": "value0example"
+      },
+      "value1": {
+        "content": "$1"
+      },
+      "value2": {
+        "content": "$2",
+        "example": "value2Example"
+      },
+      "value3": {
+        "content": "$3",
+        "example": "value3Example"
+      }
+    }
+  },
+  "description": {
+    "message": "中国語、日本語、ロシア語をサポートする Google プラグインの国際化を学習するためのプラグイン。"
+  },
+  "defaultTitle": {
+    "message": "i18n テストプラグイン"
+  },
+  "textArray0": {
+    "message": "クリックしてテストしてください detectLanguage"
+  },
+  "textArray1": {
+    "message": "クリックしてテストしてください getAcceptLanguages"
+  },
+  "textArray2": {
+    "message": "クリックしてテストしてください getMessage"
+  },
+  "textArray3": {
+    "message": "クリックしてテストしてください getUILanguage"
+  },
+  "middleBoxObj_detectLanguage_title_text": {
+    "message": "各ボタンの下にテキストが入力されます chrome.i18n.detectLanguage() の最初のパラメータ、右列は出力結果です。"
+  },
+  "middleBoxObj_detectLanguage_btn1_text": {
+    "message": "日本語の大部分をテストする"
+  },
+  "middleBoxObj_detectLanguage_p1_text": {
+    "message": "一陣の風が顔に吹き込み、気分も爽快です。 この突風には、人々をすぐに目覚めさせ、リラックスさせる特別な力があるようです。 私は椅子を見つけて座り、新鮮で心地よい空気を深呼吸しました。 長いことやっていなかった仕事の期限が近づいているのに、いつも自分の無力さを感じて元気がでません。 実際のところ、これは私のメンタルの問題であることはわかっていますし、実際、それを完了するだけの能力と時間は十分にあります。 ただ、最近いつもとても疲れていて、頭がそれほど明晰で機敏ではありません。 おそらく暑い気候の生理的影響かもしれません。 しかし、今度は突風が吹いて目が覚めました。 人生は動きの中にあり、常に前進することによってのみ新しい地平を開くことができることに突然気づきました。 難しい仕事ではありますが、一歩ずつ進めていけば必ず完了することができます。 さらに、私には同僚や友人の助けとサポートもあります。 人生の道では、受け身で待つのではなく、率先して行動しなければならないこともあります。 メンタルを調整して、積極的になり、適切な態度を示す必要があります。 私は深呼吸をして、立ち上がって、伸びをしました。 そうです、準備はできています! すべてはコントロール下にあります。 率先して前向きな姿勢を選びたいです! この風はまさに私に知恵をもたらしてくれました - 前向きに取り組めば、何でも可能です。 この仕事は無事に完了すると信じています! 一生懸命働いて、素晴らしい新しい章を始めましょう! 自信とやる気に満ちて、私はコンピューターに戻り、仕事に集中し始めました。 この風は本当に魔法のようで、私に内なる目覚めと強さを与えてくれました。 何気ない日常の中にある小さなサプライズに感謝!その冷静さと知恵を活かして、胸にキャリアを積み上げていきたいと思います。"
+  },
+  "middleBoxObj_detectLanguage_btn2_text": {
+    "message": "中国語、英語、ロシア語を混ぜてテストします"
+  },
+  "middleBoxObj_detectLanguage_btn3_text": {
+    "message": "純粋な数値をテストする"
+  },
+  "middleBoxObj_detectLanguage_p3_text": {
+    "message": "2333666"
+  },
+  "middleBoxObj_getMessage_title_text": {
+    "message": "各ボタンの下にテキストが入力されますchrome.i18n.getMessage()最初のパラメータ --- クリックすると、messages.json の設定スクリーンショットが表示されます。"
+  },
+  "middleBoxObj_getMessage_btn1_text": {
+    "message": "受信データがmessages.jsonで定義されていません"
+  },
+  "middleBoxObj_getMessage_p1_text": {
+    "message": "テスト"
+  },
+  "middleBoxObj_getMessage_btn2_text": {
+    "message": "渡された値は文字列ではありません"
+  },
+  "middleBoxObj_getMessage_btn3_text": {
+    "message": "置換文字列を渡します"
+  },
+  "middleBoxObj_getMessage_p3_text": {
+    "message": "'名前', ['No.0','No.1','No.2']"
+  },
+  "middleBoxObj_getMessage_p3_0_text": {
+    "message": "No.0"
+  },
+  "middleBoxObj_getMessage_p3_1_text": {
+    "message": "No.1"
+  },
+  "middleBoxObj_getMessage_p3_2_text": {
+    "message": "No.2"
+  },
+  "closeBigImg": {
+    "message": "全体像を閉じる"
+  },
+  "getAcceptLanguagesMessage": {
+    "message": "このメソッドにはパラメータとしてコールバック関数が 1 つだけあり、このメソッドを呼び出した後の結果を処理するために使用されます。結果は次のようになります。"
   }
 }
