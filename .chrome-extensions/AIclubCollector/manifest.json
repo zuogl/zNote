@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "AI俱乐部打卡插件",
+  "description": "收集打卡内容！使用方式：鼠标左键点击插件图标即可。",
+  "version": "1.0.0",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

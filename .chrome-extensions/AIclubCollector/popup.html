@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./utils/xlsx.full.min.js"></script>
+    <script src="./utils/download.js"></script>
+    <script src="popup.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="popup.css" />
+  </head>
+  <body>
+    <h2>打卡内容收集</h2>
+    <br />
+    <label for="mode-select">模式：</label>
+    <select id="mode-select" value="">
+      <option value="">请选择模式</option>
+      <option value="id">id模式</option>
+      <option value="date">日期模式</option>
+      <option value="likes">点赞数量模式</option>
+    </select>
+
+    <div id="id-input-wraper" class="form-group">
+      ID：
+      <input type="text" name="username" id="id-input" />
+    </div>
+
+    <div id="likes-range" class="form-group">
+      点赞数量：
+      <input type="range" value="0" id="likes" min="0" max="10" />
+      <p>大于: <output id="likes-value">0</output>个</p>
+    </div>
+
+    <div id="date-picker" class="form-group">
+      开始日期：
+      <input type="date" id="start-date" name="start-date" />
+      -
+      <input type="date" id="end-date" name="end-date" />
+    </div>
+
+    <button type="button" id="start-button">开始</button>
+  </body>
+</html>
